@@ -19,3 +19,5 @@ Suggests:
 Imports: 
     stats,
     graphics
+URL: https://github.com/3mmaRand/leeds
+BugReports: https://github.com/3mmaRand/leeds/issues
