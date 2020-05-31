@@ -1,16 +1,21 @@
 Package: leeds
-Title: What the Package Does (One Line, Title Case)
+Title: Creates plots in a Leeds United colour
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Emma",
+           family = "Rand",
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: Displays plots in one of three colours (Leeds blue, Leeds yellow
+    or Leeds anniversary gold) specified by the user.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
+Suggests: 
+    testthat
+Imports: 
+    stats,
+    graphics
