@@ -1,0 +1,56 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# leeds
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of leeds is to generate plots in one of three colours (Leeds blue, Leeds yellow or Leeds anniversary gold) specified by the user.
+
+```{r echo=FALSE, fig.height=1.5, fig.width=4.5}
+library(ggplot2)
+pal <- c("#FFCD00", "#1D428A", "#AC944D")
+namepal <- c("yellow", "blue", "anniversary_gold")
+df <- data.frame(x = c("a", "b", "c"), y = 1)
+ggplot(df, aes(x = x, y = 1, fill = x)) +
+  geom_col(width = 1, show.legend = FALSE) +
+  scale_fill_manual(values = pal) +
+  geom_text(aes(x = x, y = y/3), label = namepal) +
+   geom_text(aes(x = x, y =2* y/3), label = pal) +
+  theme_void()
+```
+
+
+## Installation
+
+You can install from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("3mmaRand/leeds")
+```
+## Example
+
+This is a basic example:
+
+```{r example}
+library(leeds)
+seed <- 4
+leeds_box("anniversary_gold", seed)
+```
+
